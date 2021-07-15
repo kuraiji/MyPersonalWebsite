@@ -1,0 +1,26 @@
+@use 'sass:map';
+
+//Variables
+$breakpoints: (small: 576px, medium: 768px, large: 992px, extra-large: 1200px);
+
+//Colors
+$color-primary: #FFF;
+$color-secondary: #000;
+$color-accent: #FF0505;
+$color-accent-darken: #8C0000;
+
+
+//Fonts
+$fonts-sans-serif: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+$fonts-serif: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+$fonts-mono: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+$font: 'Raleway', $fonts-sans-serif;
+
+//Mixins
+//Media mixin that will automatically generate a media query selector based on size (from the breakpoints in _variables)
+@mixin media($key){
+  $size: map.get($breakpoints, $key);
+  @media (min-width: $size){
+    @content
+  }
+}

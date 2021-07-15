@@ -1,0 +1,13 @@
+@use "abstract";
+
+//Base
+:root {
+}
+
+html{
+  font-size: 62.5%; //Used to make rem calculations easier. 1rem = 10px on default browser settings
+}
+
+body{
+  font-family: var(--font-standard);
+}
