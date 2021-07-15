@@ -12,6 +12,10 @@ class MyDocument extends Document {
                     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=optional"
                           rel="stylesheet"
                     />
+                    <link rel="icon"
+                          type="image/svg+xml"
+                          sizes="any"
+                          href="/favicon.svg"/>
                 </Head>
                 <body>
                 <Main />
