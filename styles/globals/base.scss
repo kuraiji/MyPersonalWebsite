@@ -2,7 +2,11 @@
 
 //Base
 :root {
-  --font: #{abstract.$font}
+  --font: #{abstract.$font};
+  --color-primary: #{abstract.$color-primary};
+  --color-bg: #{abstract.$color-bg-dark};
+  --color-nav: #{abstract.$color-nav-dark};
+  --color-text: #{abstract.$color-text-dark};
 }
 
 html{

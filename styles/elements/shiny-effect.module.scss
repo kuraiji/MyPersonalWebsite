@@ -1,0 +1,13 @@
+.shiny {
+  --deg: -90deg;
+  background: linear-gradient(var(--deg), var(--color-primary) 9%, #FFF 10%, var(--color-primary) 20%);
+  background-size: 200% 100%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: shine ease-in-out infinite 2.5s;
+}
+
+@keyframes shine {
+  0% {background-position: 0;}
+  100% {background-position: -150%;}
+}

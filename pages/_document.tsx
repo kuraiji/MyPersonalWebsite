@@ -9,7 +9,8 @@ class MyDocument extends Document {
         return (
             <Html>
                 <Head>
-                    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=optional"
+                    <link rel="preconnect" href="https://fonts.gstatic.com" />
+                    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=optional"
                           rel="stylesheet"
                     />
                     <link rel="icon"

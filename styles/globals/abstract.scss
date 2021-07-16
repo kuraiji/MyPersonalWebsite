@@ -1,11 +1,18 @@
 @use 'sass:map';
 
 //Variables
-$breakpoints: (small: 576px, medium: 768px, large: 992px, extra-large: 1200px);
+$breakpoints: (small: 36em, medium: 48em, large: 62em, extra-large: 75em);
 
 //Colors
-
-
+$color-primary: #FF0505;
+//Dark Theme:
+$color-bg-dark: #191919;
+$color-nav-dark: #3B3B3B;
+$color-text-dark: #FFF;
+//Light Theme:
+$color-bg-light: #FFF;
+$color-nav-light: #05FFFF;
+$color-text-light: #000;
 
 //Fonts
 $fonts-sans-serif: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
