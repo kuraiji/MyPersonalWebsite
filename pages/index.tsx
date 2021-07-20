@@ -1,8 +1,11 @@
 import Head from 'next/head'
-import BodyText from "../elements/bodytext";
 import styles from '../styles/pages/Home.module.scss'
+import List from "../components/list";
 
 export default function Home() {
+  const frontend = ['HTML', 'CSS', 'SASS', 'JavaScript', 'React', 'Next.js'];
+  const backend = ['C', 'C++', 'C#', 'Python', 'Java', 'TypeScript', 'Node.js', 'SQL', 'NoSQL'];
+
   return (
     <div className={styles.page}>
         <Head>
@@ -10,7 +13,7 @@ export default function Home() {
         </Head>
         <main>
             <div>
-                <BodyText className={styles.test}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto cupiditate enim iure iusto, libero nulla rem repellendus sit soluta voluptates. Consequatur cupiditate dolor iure, maxime perferendis quod tempora tempore ullam.</BodyText>
+                <List className={styles.test} items={frontend}>Front End</List>
             </div>
         </main>
     </div>

@@ -13,3 +13,16 @@ html{
   font-size: 62.5%; //Used to make rem calculations easier. 1rem = 10px on default browser settings
   font-family: var(--font);
 }
+
+//Remove animations for any visitors that don't like them
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+  }
+}
