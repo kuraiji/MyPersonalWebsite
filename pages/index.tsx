@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/pages/Home.module.scss'
-import List from "../components/list";
+import Hero from "../components/hero";
 
 export default function Home() {
   const frontend = ['HTML', 'CSS', 'SASS', 'JavaScript', 'React', 'Next.js'];
@@ -13,11 +13,11 @@ export default function Home() {
         </Head>
         <main>
             <div>
-                <List className={styles.test} items={frontend}>Front End</List>
+                <Hero src="/images/hero.webp" alt={"A picture of Payman Ahmadpour"}/>
             </div>
         </main>
     </div>
   )
 }
 
-//TODO: List (Glitched and Not Glitched), Hero, Button, Navigation Bar, Footer
+//TODO: Button, Navigation Bar, Footer
