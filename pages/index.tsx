@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/pages/Home.module.scss'
-import Hero from "../components/hero";
+import Button from "../components/button";
 
 export default function Home() {
   const frontend = ['HTML', 'CSS', 'SASS', 'JavaScript', 'React', 'Next.js'];
@@ -12,12 +12,12 @@ export default function Home() {
             <title>Workbench</title>
         </Head>
         <main>
-            <div>
-                <Hero src="/images/hero.webp" alt={"A picture of Payman Ahmadpour"}/>
+            <div className={styles.test}>
+                <Button href="#0">Go to Projects Page</Button>
             </div>
         </main>
     </div>
   )
 }
 
-//TODO: Button, Navigation Bar, Footer
+//TODO: Navigation Bar, Footer

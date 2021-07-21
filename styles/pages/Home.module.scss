@@ -1,8 +1,9 @@
 .page{
   background: var(--color-bg);
+  min-height: 100vh;
 }
 
 .test {
-  display: inline-block;
-  margin: 0;
+  padding-top: 10em;
+  margin-left: 10em;
 }

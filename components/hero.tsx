@@ -12,7 +12,7 @@ export default function Hero(props: HeroProps) : JSX.Element {
         <div className={styles.hero_container}>
             <picture>
                 <source/>
-                <img className={styles.hero_image} src={props.src} alt={props.alt}/>
+                <img className={styles.hero_image} src={props.src} alt={props.alt} loading={props.loading}/>
             </picture>
         </div>
     );
