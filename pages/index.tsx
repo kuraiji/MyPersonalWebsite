@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/pages/Home.module.scss'
-import Button from "../components/button";
+import NavButton from "../elements/navbutton";
+import {faUser} from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
   const frontend = ['HTML', 'CSS', 'SASS', 'JavaScript', 'React', 'Next.js'];
@@ -13,7 +14,7 @@ export default function Home() {
         </Head>
         <main>
             <div className={styles.test}>
-                <Button href="#0">Go to Projects Page</Button>
+                <NavButton icon={faUser}>About</NavButton>
             </div>
         </main>
     </div>
