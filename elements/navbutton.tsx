@@ -4,14 +4,15 @@ import {IconDefinition} from "@fortawesome/free-brands-svg-icons";
 
 interface NavButtonProps {
     children: string;
-    icon: IconDefinition
+    icon: IconDefinition;
+    href: string;
 }
 
 export default function NavButton(props: NavButtonProps) : JSX.Element {
     return (
-        <a className={styles.buttontext} href="#0">
+        <a className={styles.buttontext} href={props.href}>
             <FontAwesomeIcon className={styles.buttonicon} icon={props.icon}/>
-            {props.children}
+            <p>{props.children}</p>
         </a>
     );
 }
