@@ -1,7 +1,9 @@
 @use "../globals/abstract";
 
+$size-font: 2em;
+
 .buttonicon {
-  font-size: 3.2rem;
+  font-size: #{$size-font};
 }
 
 .buttontext {
@@ -9,22 +11,36 @@
   background: var(--color-nav);
   color: var(--color-text);
   text-decoration: none;
-  font-size: 1.6rem;
-  display: inline-flex;
+  font-size: 1.6em;
+  display: flex;
   flex-direction: column;
   align-items: center;
   outline: none;
   transition: background ease-in-out 150ms;
-  padding: var(--padding);
+  padding: var(--padding) 0;
+  border: none;
+  min-width: 100%;
 
   & > p {
     line-height: 0;
     padding: 1em 0 var(--padding);
     margin: 0;
   }
+}
 
-
+.normalbutton {
   &:hover, &:focus-visible {
     background: darken(abstract.$color-primary, 25%);
   }
+}
+
+.specialbutton {
+  cursor: pointer;
+  &:focus-visible {
+    outline: 2px dashed var(--color-primary);
+  }
+}
+
+.logo {
+  width: calc(#{$size-font} + 1.5em);
 }
