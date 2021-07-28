@@ -1,0 +1,13 @@
+@use "../globals/abstract";
+
+.dark {
+  --color-bg: #{abstract.$color-bg-dark};
+  --color-nav: #{abstract.$color-nav-dark};
+  --color-text: #{abstract.$color-text-dark};
+}
+
+.light {
+  --color-bg: #{abstract.$color-bg-light};
+  --color-nav: #{abstract.$color-nav-light};
+  --color-text: #{abstract.$color-text-light};
+}

@@ -1,3 +1,5 @@
+@use "../globals/abstract";
+
 .navbar {
   list-style-type: none;
   margin: 0;
@@ -24,4 +26,14 @@
   visibility: hidden;
   transition: all 200ms ease-out;
   transform: translate(0, -100%);
+}
+
+.remove {
+  display: none;
+}
+
+.grow {
+  @include abstract.media(large) {
+    flex-grow: 2;
+  }
 }

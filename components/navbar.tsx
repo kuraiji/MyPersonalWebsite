@@ -5,7 +5,6 @@ import useScrollDirection from "../hooks/onscroll";
 
 export default function NavBar() : JSX.Element {
     const dir = useScrollDirection({initialDirection:false, thresholdPixels:0});
-    console.log(dir);
 
     return (
         <ul className={`${styles.navbar} ${dir < 0 ? styles.hidden : styles.active}`}>
@@ -15,13 +14,13 @@ export default function NavBar() : JSX.Element {
             <li className={styles.navbutton}>
                 <NavButton icon={faStar} href="#0">Ranking</NavButton>
             </li>
-            <li className={styles.navbutton}>
+            <li className={`${styles.navbutton} ${styles.grow}`}>
                 <NavButtonHomePage href="#0"/>
             </li>
             <li className={styles.navbutton}>
                 <NavButton icon={faLaptopCode} href="#0">Projects</NavButton>
             </li>
-            <li className={styles.navbutton}>
+            <li className={`${styles.navbutton}`}>
                 <NavButtonDarkMode icon={faToggleOn}/>
             </li>
         </ul>

@@ -44,3 +44,10 @@ $size-font: 2em;
 .logo {
   width: calc(#{$size-font} + 1.5em);
 }
+
+.name {
+  flex-direction: row;
+  padding-left: 1em;
+  text-indent: 10px;
+  font-weight: 700;
+}

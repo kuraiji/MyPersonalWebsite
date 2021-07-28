@@ -2,6 +2,7 @@ import styles from "../styles/elements/navbutton.module.scss"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {IconDefinition} from "@fortawesome/free-brands-svg-icons";
 
+
 interface NavButtonProps {
     children: string;
     icon: IconDefinition;
@@ -40,5 +41,4 @@ export function NavButtonDarkMode(props: NavButtonDarkModeProps) : JSX.Element {
             <p>Light</p>
         </button>
     )
-
 }
