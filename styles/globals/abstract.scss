@@ -9,12 +9,14 @@ $color-primary: #FF0505;
 $color-bg-dark: #191919;
 $color-nav-dark: #3B3B3B;
 $color-text-dark: #FFF;
+$color-highlight-dark: #AD0000;
 //Light Theme:
 $color-bg-light: #FFF;
 $color-nav-light: #e6e6e6;
-$color-text-light: #000;
+$color-text-light: #141414;
+$color-highlight-light: #FF7575;
 
-//Fonts
+  //Fonts
 $fonts-sans-serif: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
 $fonts-serif: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
 $fonts-mono: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;

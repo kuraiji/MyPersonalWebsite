@@ -2,6 +2,7 @@
 
 .navbar {
   list-style-type: none;
+  background: var(--color-nav);
   margin: 0;
   padding: 0;
   display: flex;
@@ -11,6 +12,7 @@
   position:fixed;
   top: 0;
   width: 100%;
+  transition: background 150ms ease-in-out;
 }
 
 .navbutton {
@@ -19,12 +21,12 @@
 
 .active {
   visibility: visible;
-  transition: all 200ms ease-in;
+  transition: transform 200ms ease-out, visibility 200ms ease-out;
 }
 
 .hidden {
   visibility: hidden;
-  transition: all 200ms ease-out;
+  transition: transform 200ms ease-out, visibility 200ms ease-out;
   transform: translate(0, -100%);
 }
 

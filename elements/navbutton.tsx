@@ -1,6 +1,7 @@
 import styles from "../styles/elements/navbutton.module.scss"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {IconDefinition} from "@fortawesome/free-brands-svg-icons";
+import {toggleTheme} from "../hooks/ontheme";
 
 
 interface NavButtonProps {
@@ -36,9 +37,8 @@ export function NavButtonHomePage(props: NavButtonHomePageProps) : JSX.Element {
 
 export function NavButtonDarkMode(props: NavButtonDarkModeProps) : JSX.Element {
     return (
-        <button className={`${styles.buttontext} ${styles.specialbutton} ${styles.darkmode}`}>
+        <button onClick={toggleTheme} className={`${styles.buttontext} ${styles.specialbutton} ${styles.darkmode}`}>
             <FontAwesomeIcon className={`${styles.buttonicon} ${styles.iconpadding}`} icon={props.icon}/>
-            <p>Light</p>
         </button>
     )
 }

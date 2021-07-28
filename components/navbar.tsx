@@ -1,7 +1,8 @@
 import styles from "../styles/components/navbar.module.scss"
 import NavButton, {NavButtonDarkMode, NavButtonHomePage} from "../elements/navbutton";
-import {faInfo, faStar, faLaptopCode, faToggleOn, faToggleOff} from "@fortawesome/free-solid-svg-icons";
+import {faInfo, faStar, faLaptopCode, faSun, faMoon} from "@fortawesome/free-solid-svg-icons";
 import useScrollDirection from "../hooks/onscroll";
+import useTheme from "../hooks/ontheme";
 
 export default function NavBar() : JSX.Element {
     const dir = useScrollDirection({initialDirection:false, thresholdPixels:0});
@@ -21,7 +22,7 @@ export default function NavBar() : JSX.Element {
                 <NavButton icon={faLaptopCode} href="#0">Projects</NavButton>
             </li>
             <li className={`${styles.navbutton}`}>
-                <NavButtonDarkMode icon={faToggleOn}/>
+                <NavButtonDarkMode icon={useTheme() === "light" ? faSun : faMoon}/>
             </li>
         </ul>
     );

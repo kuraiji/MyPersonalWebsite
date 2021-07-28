@@ -8,7 +8,7 @@ $size-font: 2em;
 
 .buttontext {
   --padding: 0.5em;
-  background: var(--color-nav);
+  background: inherit;
   color: var(--color-text);
   text-decoration: none;
   font-size: 1.6em;
@@ -20,6 +20,7 @@ $size-font: 2em;
   padding: var(--padding) 0;
   border: none;
   min-width: 100%;
+  -webkit-tap-highlight-color: transparent;
 
   & > p {
     line-height: 0;
@@ -30,7 +31,7 @@ $size-font: 2em;
 
 .normalbutton {
   &:hover, &:focus-visible {
-    background: darken(abstract.$color-primary, 25%);
+    background: var(--color-highlight);
   }
 }
 

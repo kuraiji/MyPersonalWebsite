@@ -1,12 +1,9 @@
 import {useEffect, useState} from "react";
 
-
-
 interface ScrollProps{
     initialDirection: boolean;
     thresholdPixels: number;
 }
-
 
 const useScrollDirection = ({initialDirection, thresholdPixels} : ScrollProps) => {
     const [scrollDir, setScrollDir] = useState(0);
@@ -31,6 +28,5 @@ const useScrollDirection = ({initialDirection, thresholdPixels} : ScrollProps) =
 
     return scrollDir;
 }
-
 
 export default useScrollDirection;

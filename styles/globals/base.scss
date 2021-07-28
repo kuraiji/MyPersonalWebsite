@@ -7,11 +7,27 @@
   --color-bg: #{abstract.$color-bg-dark};
   --color-nav: #{abstract.$color-nav-dark};
   --color-text: #{abstract.$color-text-dark};
+  --color-highlight: #{abstract.$color-highlight-dark};
 }
 
 html{
   font-size: 62.5%; //Used to make rem calculations easier. 1rem = 10px on default browser settings
   font-family: var(--font);
+}
+
+//Global Themes Class
+.dark {
+  --color-bg: #{abstract.$color-bg-dark};
+  --color-nav: #{abstract.$color-nav-dark};
+  --color-text: #{abstract.$color-text-dark};
+  --color-highlight: #{abstract.$color-highlight-dark};
+}
+
+.light {
+  --color-bg: #{abstract.$color-bg-light};
+  --color-nav: #{abstract.$color-nav-light};
+  --color-text: #{abstract.$color-text-light};
+  --color-highlight: #{abstract.$color-highlight-light};
 }
 
 //Remove animations for any visitors that don't like them
