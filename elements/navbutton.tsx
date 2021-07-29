@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "../styles/elements/navbutton.module.scss"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {IconDefinition} from "@fortawesome/free-brands-svg-icons";
@@ -20,18 +21,22 @@ interface NavButtonDarkModeProps {
 
 export default function NavButton(props: NavButtonProps) : JSX.Element {
     return (
-        <a className={`${styles.buttontext} ${styles.normalbutton}`} href={props.href}>
-            <FontAwesomeIcon className={styles.buttonicon} icon={props.icon}/>
-            <p>{props.children}</p>
-        </a>
+        <Link href={props.href}>
+            <a className={`${styles.buttontext} ${styles.normalbutton}`}>
+                <FontAwesomeIcon className={styles.buttonicon} icon={props.icon}/>
+                <p>{props.children}</p>
+            </a>
+        </Link>
     );
 }
 
 export function NavButtonHomePage(props: NavButtonHomePageProps) : JSX.Element {
     return (
-        <a className={`${styles.buttontext} ${styles.specialbutton}`} href={props.href}>
-            <img className={`${styles.logo}`} src="favicon.svg" alt="Homepage Icon"/>
-        </a>
+        <Link href={props.href}>
+            <a className={`${styles.buttontext} ${styles.specialbutton}`}>
+                <img className={`${styles.logo}`} src={"favicon.svg"} alt="Homepage Icon"/>
+            </a>
+        </Link>
     )
 }
 

@@ -9,16 +9,16 @@ export default function NavBar() : JSX.Element {
     return (
         <ul className={`${styles.navbar} ${dir < 0 ? styles.hidden : styles.active}`}>
             <li className={styles.navbutton}>
-                <NavButton icon={faInfo} href="#0">About</NavButton>
+                <NavButton icon={faInfo} href="/about">About</NavButton>
             </li>
             <li className={styles.navbutton}>
-                <NavButton icon={faStar} href="#0">Ranking</NavButton>
+                <NavButton icon={faStar} href="/ranking">Ranking</NavButton>
             </li>
             <li className={`${styles.navbutton} ${styles.grow}`}>
-                <NavButtonHomePage href="#0"/>
+                <NavButtonHomePage href="/"/>
             </li>
             <li className={styles.navbutton}>
-                <NavButton icon={faLaptopCode} href="#0">Projects</NavButton>
+                <NavButton icon={faLaptopCode} href="/projects">Projects</NavButton>
             </li>
             <li className={`${styles.navbutton}`}>
                 <NavButtonDarkMode iconDark={faMoon} iconLight={faSun}/>

@@ -1,28 +1,40 @@
+import Link from "next/link";
 import styles from "../styles/components/footer.module.scss"
 
-interface FooterProps {
-    children?: string
-}
-
-export default function Footer(props: FooterProps) : JSX.Element {
+export default function Footer() : JSX.Element {
+    // noinspection HtmlUnknownTarget
     return (
         <footer className={styles.footer}>
             <div>
-                <a href="#0">
-                    <img className={styles.logo} src="favicon.svg" alt="Homepage Icon"/>
-                    <strong className={styles.logotext}>Kuraiji</strong>
-                </a>
+                <Link href="/">
+                    <a>
+                        <img className={styles.logo} src="favicon.svg" alt="Homepage Icon"/>
+                        <strong className={styles.logotext}>Kuraiji</strong>
+                    </a>
+                </Link>
             </div>
             <ul>
-                <li><a href="#0">
-                    About
-                    </a></li>
-                <li><a href="#0">
-                    Ranking
-                </a></li>
-                <li><a href="#0">
-                    Projects
-                </a></li>
+                <li>
+                    <Link href="/about">
+                        <a>
+                            About
+                        </a>
+                    </Link>
+                </li>
+                <li>
+                    <Link href="/ranking">
+                        <a>
+                            Ranking
+                        </a>
+                    </Link>
+                </li>
+                <li>
+                    <Link href="/projects">
+                        <a>
+                            Projects
+                        </a>
+                    </Link>
+                </li>
             </ul>
             <p>A website by <b>Payman Ahmadpour</b></p>
         </footer>

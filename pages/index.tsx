@@ -1,23 +1,27 @@
 import Head from 'next/head';
 import styles from '../styles/pages/Home.module.scss';
-import Footer from "../components/footer";
 import useTheme from "../hooks/ontheme";
-
+import {getFrontend, getBackend} from "../data/programminglanguages";
+import NavBar from "../components/navbar";
+import Footer from "../components/footer";
+import Button from "../components/button";
 
 export default function Home() {
-  const frontend = ['HTML', 'CSS', 'SASS', 'JavaScript', 'React', 'Next.js'];
-  const backend = ['C', 'C++', 'C#', 'Python', 'Java', 'TypeScript', 'Node.js', 'SQL', 'NoSQL'];
+    const frontend = getFrontend();
+    const backend = getBackend();
 
-  return (
-    <div className={`${styles.page} ${useTheme()}`}>
+    return (
+    <div className={`${styles.page} ${styles.test} ${useTheme()}`}>
         <Head>
             <title>Workbench</title>
         </Head>
         <main>
+            <NavBar/>
             <Footer/>
+            <Button href="#0">Click Me</Button>
         </main>
     </div>
   )
 }
 
-//TODO: Make API for Video Games and Projects, Revisit Hero, Create Landing Page
+//TODO: Create Landing Page

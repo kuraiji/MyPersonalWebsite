@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "../styles/components/button.module.scss"
 
 interface ButtonProps {
@@ -8,6 +9,8 @@ interface ButtonProps {
 
 export default function Button(props: ButtonProps) : JSX.Element {
     return (
-        <a className={`${props.className} ${styles.button}`} href={props.href}>{props.children}</a>
+        <Link href={props.href}>
+            <a className={`${props.className} ${styles.button}`}>{props.children}</a>
+        </Link>
     );
 }
