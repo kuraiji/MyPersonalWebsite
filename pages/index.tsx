@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import styles from '../styles/pages/Home.module.scss';
-import NavBar from "../components/navbar";
+import Footer from "../components/footer";
 import useTheme from "../hooks/ontheme";
 
 
@@ -13,11 +13,11 @@ export default function Home() {
         <Head>
             <title>Workbench</title>
         </Head>
-        <main id="main">
-            <NavBar/>
+        <main>
+            <Footer/>
         </main>
     </div>
   )
 }
 
-//TODO: Footer, Make API for Video Games and Projects
+//TODO: Make API for Video Games and Projects, Revisit Hero, Create Landing Page

@@ -4,7 +4,7 @@ import {faInfo, faStar, faLaptopCode, faSun, faMoon} from "@fortawesome/free-sol
 import useScrollDirection from "../hooks/onscroll";
 
 export default function NavBar() : JSX.Element {
-    const dir = useScrollDirection({initialDirection:false, thresholdPixels:0});
+    const dir = useScrollDirection({initialDirection:false, thresholdPixels:30});
 
     return (
         <ul className={`${styles.navbar} ${dir < 0 ? styles.hidden : styles.active}`}>

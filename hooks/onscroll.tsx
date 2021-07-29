@@ -14,6 +14,7 @@ const useScrollDirection = ({initialDirection, thresholdPixels} : ScrollProps) =
         const updateScrollDir = () => {
             const scrollY = window.pageYOffset;
 
+            if(Math.abs(scrollY-lastScrollY) < thresholdPixels) return;
             setScrollDir(scrollY > lastScrollY ? -1 : 1);
             lastScrollY = scrollY > 0 ? scrollY : 0;
         };
