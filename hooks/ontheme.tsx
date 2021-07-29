@@ -1,17 +1,25 @@
 import useSWR, {mutate} from "swr";
 
 const useTheme = () => {
-    const { data } = useSWR('theme', ()=>{return window.localStorage.getItem("theme");});
-    let theme = "";
-    if(data) theme = data;
-    return theme
+    const { data } = useSWR('theme', createDefaultTheme);
+    return data;
+}
+
+const createDefaultTheme = () => {
+    let data = window.localStorage.getItem("theme");
+    if(data) return data;
+    const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
+    let theme = "light";
+    if(darkThemeMq.matches) theme = "dark";
+    localStorage.setItem('theme', theme);
+    return theme;
 }
 
 export const toggleTheme = () => {
     const theme = localStorage.getItem('theme');
     const newTheme = theme === "dark" ? "light" : "dark";
     localStorage.setItem('theme', newTheme);
-    const returned = mutate('theme');
+    mutate('theme').then();
 }
 
 export default useTheme;

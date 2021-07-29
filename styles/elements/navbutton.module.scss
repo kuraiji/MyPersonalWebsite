@@ -52,3 +52,21 @@ $size-font: 2em;
   text-indent: 10px;
   font-weight: 700;
 }
+
+.darkmode {
+  display: grid;
+}
+
+.darkbutton {
+  grid-area: 1 / 1 / 1/ 1;
+}
+
+.active {
+  opacity: 1;
+  transition: opacity 200ms ease-in-out;
+}
+
+.hidden {
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+}

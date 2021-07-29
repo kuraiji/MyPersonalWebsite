@@ -20,4 +20,4 @@ export default function Home() {
   )
 }
 
-//TODO: Footer
+//TODO: Footer, Make API for Video Games and Projects
