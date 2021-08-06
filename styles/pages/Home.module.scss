@@ -1,8 +1,70 @@
 .page{
   background: var(--color-bg);
-  padding-top: 10vh;
+  padding-top: 13vh;
+  min-height: 200vh;
 }
 
-.test {
-  height: 200vh;
+.openingheader{
+  padding-left: 2rem;
+
+  & > h1 {
+    padding-left: 2.5rem;
+  }
+
+  & > p {
+    font-size: 2.8rem;
+    color: var(--color-text);
+    display: inline;
+    font-weight: 200;
+
+    &:last-of-type {
+      font-weight: 800;
+      color: var(--color-primary);
+    }
+  }
 }
+
+.hero {
+  margin: 2rem auto 4rem;
+}
+
+.bodytext {
+  font-weight: 300;
+  font-size: 1.6rem;
+  color: var(--color-text);
+  width: min(50ch, 100vw);
+  opacity: 90%;
+  line-height: 2.7rem;
+
+  & > p:nth-child(-n+3) {
+    text-align: center;
+    margin: 0 1em;
+  }
+
+  & > p:nth-last-child(-n+2) {
+    text-align: center;
+    margin: 1em;
+  }
+
+  & strong {
+    color: var(--color-primary);
+  }
+}
+
+.codingpicture > div {
+  max-height: 25vh;
+  width: auto;
+}
+
+.subheader {
+  font-weight: 500;
+  font-size: 2.9rem;
+  color: var(--color-text);
+  text-align: center;
+  margin: 1rem 1rem;
+}
+
+.inline {
+  display: inline;
+}
+

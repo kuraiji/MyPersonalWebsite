@@ -36,7 +36,7 @@ export default function Footer() : JSX.Element {
                     </Link>
                 </li>
             </ul>
-            <p>A website by <b>Payman Ahmadpour</b></p>
+            <p><small>A website by <b>Payman Ahmadpour</b></small></p>
         </footer>
     );
 }
